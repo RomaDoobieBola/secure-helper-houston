@@ -24,7 +24,7 @@ export const Services = () => {
     <section className="py-16 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-primary mb-12">
-          Our Services
+          Commercial & Residential Locksmith
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
