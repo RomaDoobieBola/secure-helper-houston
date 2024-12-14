@@ -32,17 +32,17 @@ const inventoryItems = [
 
 export const Inventory = () => {
   return (
-    <section className="py-16 px-4 md:px-6 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Inventory</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section id="inventory" className="py-16 px-4 md:px-6 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-6">Our Inventory</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {inventoryItems.map((item, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index}>
               <CardHeader>
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 mb-4">
-                  <item.icon className="h-6 w-6 text-primary" />
+                <div className="flex items-center">
+                  <item.icon className="h-6 w-6 text-primary mr-2" />
+                  <CardTitle>{item.title}</CardTitle>
                 </div>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>{item.description}</CardDescription>

@@ -32,25 +32,21 @@ const completedJobs = [
 
 export const CompletedJobs = () => {
   return (
-    <section className="py-16 px-4 md:px-6">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Completed Jobs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {completedJobs.map((job, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-green-100 mb-4">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
-                </div>
-                <CardTitle className="text-xl">{job.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{job.description}</CardDescription>
-                <p className="text-sm text-muted-foreground mt-2">{job.date}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+    <section id="completed-jobs" className="py-16 px-4 md:px-6">
+      <h2 className="text-2xl font-bold mb-4">Completed Jobs</h2>
+      <div className="grid grid-cols-1 gap-4">
+        {completedJobs.map((job, index) => (
+          <Card key={index}>
+            <CardHeader>
+              <CardTitle>{job.title}</CardTitle>
+              <CardDescription>{job.description}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              <span className="text-sm text-gray-500">{job.date}</span>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
